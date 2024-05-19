@@ -53,7 +53,7 @@ app.post('/generate-sonnet', async (req, res) => {
     }
 });
 // just for checking
-app.get('/', (req, res) => {
+app.get('/home', (req, res) => {
     res.send("HELLO WORLD")
 })
 
