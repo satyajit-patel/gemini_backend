@@ -30,7 +30,7 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 const app = express();
-const port = process.env.PORT; // Correctly assign port number
+const port = process.env.PORT || 5000;
 
 app.use(cors()); // Enable CORS
 app.use(bodyParser.json());
@@ -56,7 +56,7 @@ app.post('/generate-sonnet', async (req, res) => {
 // Just for checking
 app.get('/home', (req, res) => {
     res.send("HELLO WORLD");
-})
+});
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
